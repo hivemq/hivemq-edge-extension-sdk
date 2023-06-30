@@ -7,8 +7,8 @@
 
 = HiveMQ Edge Extension SDK
 
-image:https://maven-badges.herokuapp.com/maven-central/com.hivemq/hivemq-extension-sdk/badge.svg?style=for-the-badge["Maven Central",link="https://maven-badges.herokuapp.com/maven-central/com.hivemq/hivemq-extension-sdk"]
-image:https://javadoc.io/badge2/com.hivemq/hivemq-extension-sdk/javadoc.svg?style=for-the-badge["javadoc",link=https://javadoc.io/doc/com.hivemq/hivemq-extension-sdk]
+image:https://maven-badges.herokuapp.com/maven-central/com.hivemq/hivemq-edge-extension-sdk/badge.svg?style=for-the-badge["Maven Central",link="https://maven-badges.herokuapp.com/maven-central/com.hivemq/hivemq-edge-extension-sdk"]
+image:https://javadoc.io/badge2/com.hivemq/hivemq-edge-extension-sdk/javadoc.svg?style=for-the-badge["javadoc",link=https://javadoc.io/doc/com.hivemq/hivemq-edge-extension-sdk]
 
 {hivemq-edge}[HiveMQ Edge] offers this free, open source extension SDK.
 The HiveMQ Edge extension framework provides an open API that allows developers to create custom extensions that suit their specific infrastructures.
