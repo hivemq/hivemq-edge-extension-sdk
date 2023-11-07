@@ -9,7 +9,8 @@ pluginManagement {
         id("com.github.hierynomus.license") version "${extra["plugin.license.version"]}"
     }
 
-    if (file("../hivemq/plugins").exists()) {
-        includeBuild("../hivemq/plugins")
+    if (file("../hivemq-edge-composite/plugins").exists()) {
+        includeBuild("../hivemq-edge-composite/plugins")
     }
+
 }
