@@ -7,9 +7,8 @@ pluginManagement {
         id("com.github.sgtsilvio.gradle.metadata") version "${extra["plugin.metadata.version"]}"
         id("com.github.sgtsilvio.gradle.javadoc-links") version "${extra["plugin.javadoc-links.version"]}"
         id("com.github.hierynomus.license") version "${extra["plugin.license.version"]}"
-    }
-
-    if (file("../hivemq/plugins").exists()) {
-        includeBuild("../hivemq/plugins")
+        if (file("../hivemq-edge/edge-plugins").exists()) {
+            includeBuild("../hivemq-edge/edge-plugins")
+        }
     }
 }
