@@ -19,8 +19,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterInput;
 import com.hivemq.edge.modules.config.CustomConfig;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.protocols.ProtocolAdapterSchemaManager;
-import com.hivemq.protocols.ProtocolAdapterSchemaManagerImpl;
 
 import java.util.Map;
 
@@ -50,15 +48,4 @@ public interface ProtocolAdapterFactory<E extends CustomConfig> {
      * @return The class that represents (and will encapsulate) the configuration requirements of the adapter
      */
     @NotNull Class<E> getConfigClass();
-
-
-
-    default @NotNull ProtocolAdapterSchemaManager getConfigSchemaManager(final @NotNull ObjectMapper objectMapper){
-        return new ProtocolAdapterSchemaManagerImpl(objectMapper, getConfigClass());
-    }
-
-    default @NotNull ProtocolAdapterValidator getValidator() {
-        return (objectMapper, config) -> getConfigSchemaManager(objectMapper).validateObject(config);
-    }
-
 }
