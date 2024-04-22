@@ -59,6 +59,10 @@ repositories {
 }
 
 dependencies {
+    compileOnly(libs.guava)
+    compileOnly(libs.jackson.jaxrs.jsonProvider)
+    compileOnly(libs.swagger.annotations)
+    compileOnly(libs.apache.commonsLang)
 
 }
 
