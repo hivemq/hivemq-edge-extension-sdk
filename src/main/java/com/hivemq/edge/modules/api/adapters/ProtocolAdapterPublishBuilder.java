@@ -38,4 +38,5 @@ public interface ProtocolAdapterPublishBuilder {
 
     @NotNull CompletableFuture<PublishReturnCode> send();
 
+    @NotNull ProtocolAdapterPublishBuilder withAdapter(@NotNull ProtocolAdapter adapter);
 }

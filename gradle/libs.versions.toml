@@ -1,6 +1,6 @@
 [versions]
 jackson = "2.17.0"
-
+networkNT = "1.0.84"
 
 apache-commonsCodec = "1.15"
 apache-commonsLang = "3.12.0"
@@ -19,8 +19,7 @@ swagger = "2.2.21"
 
 [libraries]
 jackson-jaxrs-jsonProvider = { module = "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider", version.ref = "jackson" }
-
-
+networkNT = { module = "com.networknt:json-schema-validator", version.ref = "networkNT" }
 
 apache-commonsCodec = { module = "commons-codec:commons-codec", version.ref = "apache-commonsCodec" }
 apache-commonsLang = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commonsLang" }
@@ -35,6 +34,7 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+
 netty-handler = { module = "io.netty:netty-handler", version.ref = "netty" }
 rocksdb = { module = "org.rocksdb:rocksdbjni", version.ref = "rocksdb" }
 swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger" }

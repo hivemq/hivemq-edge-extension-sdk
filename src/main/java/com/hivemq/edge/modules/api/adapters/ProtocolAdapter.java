@@ -15,6 +15,7 @@
  */
 package com.hivemq.edge.modules.api.adapters;
 
+import com.hivemq.edge.HiveMQEdgeConstants;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterDiscoveryInput;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterDiscoveryOutput;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterStartInput;
@@ -39,7 +40,7 @@ public interface ProtocolAdapter {
      * The adapter Id represents a unique id/name of the instance within the runtime. This
      * value should be considered immutable.
      *
-     * @return A string ID in the format {@link com.hivemq.edge.EdgeExtensionSdkConstants#ID_REGEX} which uniquely identifies
+     * @return A string ID in the format {@link HiveMQEdgeConstants#ID_REGEX} which uniquely identifies
      * the instance of the adapter.
      */
     @NotNull String getId();

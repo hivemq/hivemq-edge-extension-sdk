@@ -13,16 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.adapters.model;
+package com.hivemq.http.core;
 
-import com.codahale.metrics.MetricRegistry;
-import com.hivemq.edge.modules.config.CustomConfig;
-import com.hivemq.extension.sdk.api.annotations.NotNull;
+import java.io.IOException;
 
-public interface ProtocolAdapterInput<E extends CustomConfig> {
-    @NotNull E getConfig();
+public class MimeTypeNotFoundException extends IOException{
 
-    @NotNull MetricRegistry getMetricRegistry();
+    public MimeTypeNotFoundException() {
+    }
 
-    @NotNull String getVersion();
+    public MimeTypeNotFoundException(String message) {
+        super(message);
+    }
+
+    public MimeTypeNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public MimeTypeNotFoundException(Throwable cause) {
+        super(cause);
+    }
 }

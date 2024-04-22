@@ -24,7 +24,7 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.List;
 
-import static com.hivemq.edge.EdgeExtensionSdkConstants.ID_REGEX;
+import static com.hivemq.edge.HiveMQEdgeConstants.ID_REGEX;
 
 /**
  * @author Simon L Johnson
