@@ -3,11 +3,11 @@ package com.hivemq.edge.modules.config;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface UserProperty {
-    @NotNull String getPropertyName();
+    @NotNull String getName();
 
-    void setPropertyName(@NotNull String propertyName);
+    void setName(@NotNull String propertyName);
 
-    @NotNull String getPropertyValue();
+    @NotNull String getValue();
 
-    void setPropertyValue(@NotNull String propertyValue);
+    void setValue(@NotNull String propertyValue);
 }

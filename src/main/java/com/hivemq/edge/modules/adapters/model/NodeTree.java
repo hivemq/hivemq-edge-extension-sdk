@@ -20,7 +20,13 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 public interface NodeTree {
 
-    void addNode(@NotNull String id, @NotNull String name, @NotNull String description, @Nullable String parentId, @NotNull NodeType nodeType, boolean selectable);
+    void addNode(
+            @NotNull String id,
+            @NotNull String name,
+            @NotNull String description,
+            @Nullable String parentId,
+            @NotNull NodeType nodeType,
+            boolean selectable);
 
 }
 

@@ -24,9 +24,9 @@ public interface ProtocolAdapterPublishBuilder {
 
     @NotNull ProtocolAdapterPublishBuilder withTopic(@NotNull String mqttTopic);
 
-    @NotNull ProtocolAdapterPublishBuilder withPayload(@NotNull byte[] payload);
+    @NotNull ProtocolAdapterPublishBuilder withPayload(byte @NotNull [] payload);
 
-    @NotNull ProtocolAdapterPublishBuilder withQoS(@NotNull int qos);
+    @NotNull ProtocolAdapterPublishBuilder withQoS(int qos);
 
     @NotNull ProtocolAdapterPublishBuilder withMessageExpiryInterval(long messageExpiryInterval);
 

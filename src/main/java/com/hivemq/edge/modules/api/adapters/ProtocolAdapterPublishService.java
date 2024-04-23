@@ -15,7 +15,9 @@
  */
 package com.hivemq.edge.modules.api.adapters;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+
 public interface ProtocolAdapterPublishService {
 
-    ProtocolAdapterPublishBuilder publish();
+    @NotNull ProtocolAdapterPublishBuilder publish();
 }

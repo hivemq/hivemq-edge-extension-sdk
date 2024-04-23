@@ -1,15 +1,17 @@
 package com.hivemq.edge.model;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+
 public interface TypeIdentifier {
 
     public enum TYPE {
         BRIDGE, ADAPTER, ADAPTER_TYPE, EVENT, USER
     }
 
-    TypeIdentifier.TYPE getType();
+    TypeIdentifier.@NotNull TYPE getType();
 
-    String getIdentifier();
+    @NotNull String getIdentifier();
 
-    String getFullQualifiedIdentifier();
+    @NotNull String getFullQualifiedIdentifier();
 
 }

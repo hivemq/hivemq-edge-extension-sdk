@@ -23,12 +23,22 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
  */
 public interface ProtocolAdapterCapability {
 
-    byte     READ = 1,           /** can the adapter-type read values from the external source and publish them into the system **/
-            WRITE = 2,          /** can the adapter-type write values from the local broker publish them into the system **/
-            DISCOVER = 4;       /** can the adapter-type discover tags/names from the external source **/
+    /**
+     * can the adapter-type read values from the external source and publish them into the system
+     **/
+    byte READ = 0b00000001;
 
+    /**
+     * can the adapter-type write values from the local broker publish them into the system
+     **/
+    byte WRITE = 0b00000010;
 
-    static boolean supportsCapability(final @NotNull ProtocolAdapterInformation adapterInformation, byte capability){
+    /**
+     * can the adapter-type discover tags/names from the external source
+     **/
+    byte DISCOVER = 0b00000100;
+
+    static boolean supportsCapability(final @NotNull ProtocolAdapterInformation adapterInformation, byte capability) {
         Preconditions.checkNotNull(adapterInformation);
         return (adapterInformation.getCapabilities() & capability) == capability;
     }

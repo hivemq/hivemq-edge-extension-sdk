@@ -6,31 +6,32 @@ import com.hivemq.edge.modules.config.AdapterSubscription;
 import com.hivemq.edge.modules.config.ProtocolAdapterConfig;
 import com.hivemq.edge.modules.config.UserProperty;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.List;
 
 public interface ProtocolAdapterDataSample<T extends ProtocolAdapterConfig> {
     @JsonIgnore
-    AdapterSubscription getSubscription();
+    @NotNull AdapterSubscription getSubscription();
 
     @JsonIgnore
-    String getTopic();
+    @Nullable String getTopic();
 
     @JsonIgnore
     int getQos();
 
     @JsonIgnore
-    Long getTimestamp();
+    @NotNull Long getTimestamp();
 
     @JsonIgnore
-    List<UserProperty> getUserProperties();
+    @NotNull List<UserProperty> getUserProperties();
 
-    void setTimestamp(Long timestamp);
+    void setTimestamp(@NotNull Long timestamp);
 
     void addDataPoint(@NotNull String tagName, @NotNull Object tagValue);
 
-    void setDataPoints(List<DataPoint> list);
+    void setDataPoints(@NotNull List<DataPoint> list);
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    List<DataPoint> getDataPoints();
+    @NotNull List<DataPoint> getDataPoints();
 }

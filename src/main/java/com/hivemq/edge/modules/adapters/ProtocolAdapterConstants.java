@@ -15,6 +15,9 @@
  */
 package com.hivemq.edge.modules.adapters;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
+
 /**
  * @author Simon L Johnson
  */
@@ -38,25 +41,25 @@ public interface ProtocolAdapterConstants {
         BUILDING_AUTOMATION("Building Automation","Protocols related to building automation",  null),
         SIMULATION("Simulation","Simulation protocols, that emulate real world devices", null);
 
-        CATEGORY(final String displayName, final String description, final String image){
+        CATEGORY(final @NotNull String displayName, final @NotNull String description, final @Nullable String image){
             this.displayName = displayName;
             this.image = image;
             this.description = description;
         }
 
-        final String displayName;
-        final String description;
-        final String image;
+        final @NotNull String displayName;
+        final @NotNull String description;
+        final @Nullable String image;
 
-        public String getDisplayName() {
+        public @NotNull String getDisplayName() {
             return displayName;
         }
 
-        public String getDescription() {
+        public @NotNull String getDescription() {
             return description;
         }
 
-        public String getImage() {
+        public @Nullable String getImage() {
             return image;
         }
     }

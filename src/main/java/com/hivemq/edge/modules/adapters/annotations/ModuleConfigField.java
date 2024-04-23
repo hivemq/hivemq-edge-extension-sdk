@@ -83,7 +83,7 @@ public @interface ModuleConfigField {
     /**
      * Use this on enum types if you wish to override the default display-names for a given enum value
      */
-    String[] enumDisplayValues() default {};
+    String @NotNull [] enumDisplayValues() default {};
 
     /**
      * Required properties, properties can't be null
@@ -120,12 +120,12 @@ public @interface ModuleConfigField {
      */
     boolean arrayUniqueItems() default false;
 
-    String[] allowableValues() default {};
+    String @NotNull [] allowableValues() default {};
 
     /**
      * Custom attributes added to schema info
      */
-    @NotNull CustomAttribute[] customAttributes() default {};
+    CustomAttribute @NotNull [] customAttributes() default {};
 
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ElementType.ANNOTATION_TYPE})

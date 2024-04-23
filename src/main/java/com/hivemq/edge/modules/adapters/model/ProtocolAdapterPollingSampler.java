@@ -17,6 +17,7 @@ package com.hivemq.edge.modules.adapters.model;
 
 import com.hivemq.edge.modules.adapters.data.ProtocolAdapterDataSample;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.Date;
 import java.util.UUID;
@@ -33,13 +34,13 @@ public interface ProtocolAdapterPollingSampler<U extends ProtocolAdapterDataSamp
 
     long getPeriod();
 
-    TimeUnit getUnit();
+    @NotNull TimeUnit getUnit();
 
     /**
      * Do the work associated with this polling job. It is acceptable to throw exceptions from this method,
      * they will be caught and the process will be backed off accordingly
      */
-    CompletableFuture<U> execute() ;
+    @NotNull CompletableFuture<U> execute() ;
 
     /**
      * Called when the job is remove from the pool
@@ -48,11 +49,11 @@ public interface ProtocolAdapterPollingSampler<U extends ProtocolAdapterDataSamp
 
     boolean isClosed();
 
-    UUID getId();
-    Date getCreated();
-    String getAdapterId();
+    @NotNull UUID getId();
+    @NotNull Date getCreated();
+    @NotNull String getAdapterId();
 
-    default String getReferenceId(){
+    default @NotNull String getReferenceId(){
         return String.format("%s:%s", getAdapterId(), getId());
     }
 
@@ -62,6 +63,6 @@ public interface ProtocolAdapterPollingSampler<U extends ProtocolAdapterDataSamp
         return 25;
     }
 
-    ScheduledFuture getScheduledFuture();
-    void setScheduledFuture(ScheduledFuture future);
+    @Nullable ScheduledFuture<?> getScheduledFuture();
+    void setScheduledFuture(@NotNull ScheduledFuture<?> future);
 }

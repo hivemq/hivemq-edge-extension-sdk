@@ -66,7 +66,7 @@ public interface ProtocolAdapter {
      */
     @NotNull CompletableFuture<Void> stop();
 
-    CompletableFuture<Void> discoverValues(@NotNull ProtocolAdapterDiscoveryInput input, @NotNull ProtocolAdapterDiscoveryOutput output);
+    @NotNull CompletableFuture<Void> discoverValues(@NotNull ProtocolAdapterDiscoveryInput input, @NotNull ProtocolAdapterDiscoveryOutput output);
 
     @NotNull ProtocolAdapterInformation getProtocolAdapterInformation();
 

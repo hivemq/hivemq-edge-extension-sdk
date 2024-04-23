@@ -40,7 +40,7 @@ public interface ProtocolAdapterFactory<E extends CustomConfig> {
 
     @NotNull E convertConfigObject(final @NotNull ObjectMapper objectMapper, final @NotNull Map<String, Object> config);
 
-    @NotNull Map<String, Object> unconvertConfigObject(final @NotNull ObjectMapper objectMapper, final CustomConfig config);
+    @NotNull Map<String, Object> unconvertConfigObject(final @NotNull ObjectMapper objectMapper, final @NotNull CustomConfig config);
 
     /**
      * A bean class that will be reflected upon by the framework to determine the structural requirements of the configuration associated with

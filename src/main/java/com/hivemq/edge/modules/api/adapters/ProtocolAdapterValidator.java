@@ -28,6 +28,6 @@ import java.util.List;
  */
 public interface ProtocolAdapterValidator {
 
-    List<ProtocolAdapterValidationFailure> validateConfiguration(@NotNull ObjectMapper objectMapper, @NotNull Object config);
+    @NotNull List<ProtocolAdapterValidationFailure> validateConfiguration(@NotNull ObjectMapper objectMapper, @NotNull Object config);
 
 }

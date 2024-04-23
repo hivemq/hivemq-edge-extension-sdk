@@ -5,5 +5,5 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
 public interface ProtocolAdapterConfig extends CustomConfig {
     @NotNull String getId();
 
-    void setId(String id);
+    void setId(@NotNull String id);
 }

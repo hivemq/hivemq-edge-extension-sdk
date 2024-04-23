@@ -1,19 +1,22 @@
 package com.hivemq.edge.modules.config;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
+
 import java.util.List;
 
 public interface AdapterSubscription {
-    String getDestination();
+    @Nullable String getDestination();
 
     int getQos();
 
-    MessageHandlingOptions getMessageHandlingOptions();
+    @NotNull MessageHandlingOptions getMessageHandlingOptions();
 
-    Boolean getIncludeTimestamp();
+    @NotNull Boolean getIncludeTimestamp();
 
-    Boolean getIncludeTagNames();
+    @NotNull Boolean getIncludeTagNames();
 
-    List<UserProperty> getUserProperties();
+    @NotNull List<UserProperty> getUserProperties();
 
     enum MessageHandlingOptions {
         MQTTMessagePerTag,
