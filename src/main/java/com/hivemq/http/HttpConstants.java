@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.http.core;
+package com.hivemq.http;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;

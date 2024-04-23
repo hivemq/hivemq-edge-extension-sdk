@@ -1,11 +1,13 @@
 package com.hivemq.edge.modules.config;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+
 public interface UserProperty {
-    String getPropertyName();
+    @NotNull String getPropertyName();
 
-    void setPropertyName(String propertyName);
+    void setPropertyName(@NotNull String propertyName);
 
-    String getPropertyValue();
+    @NotNull String getPropertyValue();
 
-    void setPropertyValue(String propertyValue);
+    void setPropertyValue(@NotNull String propertyValue);
 }

@@ -16,7 +16,7 @@
 package com.hivemq.edge.modules.api.adapters;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.mqtt.handler.publish.PublishReturnCode;
+import com.hivemq.mqtt.PublishReturnCode;
 
 import java.util.concurrent.CompletableFuture;
 

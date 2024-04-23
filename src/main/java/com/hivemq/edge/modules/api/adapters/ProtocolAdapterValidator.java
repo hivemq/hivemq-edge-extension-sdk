@@ -16,7 +16,6 @@
 package com.hivemq.edge.modules.api.adapters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hivemq.edge.modules.api.adapters.model.ProtocolAdapterValidationFailure;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.List;
