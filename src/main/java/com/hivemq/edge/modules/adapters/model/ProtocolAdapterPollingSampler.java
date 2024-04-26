@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Simon L Johnson
  */
-public interface ProtocolAdapterPollingSampler<U extends ProtocolAdapterDataSample> {
+public interface ProtocolAdapterPollingSampler {
 
     long getInitialDelay();
 
@@ -40,7 +40,7 @@ public interface ProtocolAdapterPollingSampler<U extends ProtocolAdapterDataSamp
      * Do the work associated with this polling job. It is acceptable to throw exceptions from this method,
      * they will be caught and the process will be backed off accordingly
      */
-    @NotNull CompletableFuture<U> execute() ;
+    @NotNull CompletableFuture<? extends ProtocolAdapterDataSample> execute() ;
 
     /**
      * Called when the job is remove from the pool

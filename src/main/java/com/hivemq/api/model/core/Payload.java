@@ -6,8 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 public interface Payload {
 
-
-    public enum ContentType {
+     enum ContentType {
 
         JSON ("application/json"),
         PLAIN_TEXT ("text/plain"),
@@ -26,9 +25,6 @@ public interface Payload {
             return contentType;
         }
     }
-
-
-
 
     @NotNull Payload.ContentType getContentType();
 

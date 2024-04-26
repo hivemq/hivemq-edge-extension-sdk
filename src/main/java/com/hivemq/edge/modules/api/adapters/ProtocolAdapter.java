@@ -27,30 +27,31 @@ import java.util.concurrent.CompletableFuture;
 
 
 /**
- * A protocol adapter is the resource responsible for connecting to and providing data from disparate remote or local device.
- * The implementation must manage its resources internally, and adhere to the semantic lifecycle applied to the adapter instances.
+ * A protocol adapter is the resource responsible for connecting to and providing data from disparate remote or local
+ * device. The implementation must manage its resources internally, and adhere to the semantic lifecycle applied to the
+ * adapter instances.
  * <p>
- *
  *
  * @since 2023.1
  */
 public interface ProtocolAdapter {
 
     /**
-     * The adapter Id represents a unique id/name of the instance within the runtime. This
-     * value should be considered immutable.
+     * The adapter Id represents a unique id/name of the instance within the runtime. This value should be considered
+     * immutable.
      *
-     * @return A string ID in the format {@link HiveMQEdgeConstants#ID_REGEX} which uniquely identifies
-     * the instance of the adapter.
+     * @return A string ID in the format {@link HiveMQEdgeConstants#ID_REGEX} which uniquely identifies the instance of
+     *         the adapter.
      */
     @NotNull String getId();
 
 
     /**
-     * Start the adapter, establishing a connection to any internal or external device using the configuration supplied during
-     * instantiation.
+     * Start the adapter, establishing a connection to any internal or external device using the configuration supplied
+     * during instantiation.
      *
-     * @param input - the state associated with runtime. Allows the adapter to bind to required services in a decoupled manner
+     * @param input  - the state associated with runtime. Allows the adapter to bind to required services in a decoupled
+     *               manner
      * @param output - the output resulting from the start operation. The adapter will
      * @return a completable future which can be used to check on the status of the start operation.
      */
@@ -66,7 +67,12 @@ public interface ProtocolAdapter {
      */
     @NotNull CompletableFuture<Void> stop();
 
-    @NotNull CompletableFuture<Void> discoverValues(@NotNull ProtocolAdapterDiscoveryInput input, @NotNull ProtocolAdapterDiscoveryOutput output);
+    default @NotNull CompletableFuture<Void> discoverValues(
+            @NotNull ProtocolAdapterDiscoveryInput input,
+            @NotNull ProtocolAdapterDiscoveryOutput output) {
+        return CompletableFuture.failedFuture(new UnsupportedOperationException(
+                "Adapter type does not support discovery"));
+    }
 
     @NotNull ProtocolAdapterInformation getProtocolAdapterInformation();
 
@@ -74,12 +80,10 @@ public interface ProtocolAdapter {
 
     @NotNull RuntimeStatus getRuntimeStatus();
 
-    @Nullable Long getTimeOfLastStartAttempt();
-
     @Nullable String getErrorMessage();
 
     /**
-     *  Called by the framework when the instance will be discarded
+     * Called by the framework when the instance will be discarded
      */
     default void destroy() {
 

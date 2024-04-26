@@ -27,4 +27,12 @@ public interface CustomConfig {
     int DEFAULT_MAX_POLLING_ERROR_BEFORE_REMOVAL = 10;
 
     @NotNull String getId();
+
+     default int getPollingIntervalMillis() {
+       return 1000;
+    }
+
+     default int getMaxPollingErrorsBeforeRemoval() {
+        return -1;
+    }
 }

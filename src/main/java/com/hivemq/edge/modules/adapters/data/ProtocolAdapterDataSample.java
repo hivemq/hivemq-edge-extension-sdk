@@ -3,14 +3,13 @@ package com.hivemq.edge.modules.adapters.data;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hivemq.edge.modules.config.AdapterSubscription;
-import com.hivemq.edge.modules.config.ProtocolAdapterConfig;
 import com.hivemq.edge.modules.config.UserProperty;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.List;
 
-public interface ProtocolAdapterDataSample<T extends ProtocolAdapterConfig> {
+public interface ProtocolAdapterDataSample {
     @JsonIgnore
     @NotNull AdapterSubscription getSubscription();
 
