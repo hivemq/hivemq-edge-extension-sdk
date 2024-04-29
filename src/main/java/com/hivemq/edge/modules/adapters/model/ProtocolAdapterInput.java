@@ -17,6 +17,7 @@ package com.hivemq.edge.modules.adapters.model;
 
 import com.codahale.metrics.MetricRegistry;
 import com.hivemq.edge.modules.adapters.factories.AdapterFactories;
+import com.hivemq.edge.modules.adapters.metrics.ProtocolAdapterMetricsHelper;
 import com.hivemq.edge.modules.api.adapters.ModuleServices;
 import com.hivemq.edge.modules.api.adapters.ProtocolAdapterState;
 import com.hivemq.edge.modules.config.CustomConfig;
@@ -34,4 +35,6 @@ public interface ProtocolAdapterInput<E extends CustomConfig> {
     @NotNull ModuleServices moduleServices();
 
     @NotNull AdapterFactories adapterFactories();
+
+    @NotNull ProtocolAdapterMetricsHelper getProtocolAdapterMetricsHelper();
 }
