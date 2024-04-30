@@ -76,10 +76,6 @@ public interface ProtocolAdapter {
 
     @NotNull ProtocolAdapterInformation getProtocolAdapterInformation();
 
-    @NotNull ConnectionStatus getConnectionStatus();
-
-    @NotNull RuntimeStatus getRuntimeStatus();
-
     @Nullable String getErrorMessage();
 
     /**
@@ -87,19 +83,5 @@ public interface ProtocolAdapter {
      */
     default void destroy() {
 
-    }
-
-
-    enum RuntimeStatus {
-        STARTED,
-        STOPPED
-    }
-
-    enum ConnectionStatus {
-        CONNECTED,
-        DISCONNECTED,
-        STATELESS,
-        UNKNOWN,
-        ERROR
     }
 }

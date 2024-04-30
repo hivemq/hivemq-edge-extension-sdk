@@ -5,9 +5,23 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 public interface ProtocolAdapterState {
 
-    boolean setConnectionStatus(@NotNull ProtocolAdapter.ConnectionStatus connectionStatus);
+    enum RuntimeStatus {
+        STARTED,
+        STOPPED
+    }
 
-    @NotNull ProtocolAdapter.ConnectionStatus getConnectionStatus();
+    enum ConnectionStatus {
+        CONNECTED,
+        DISCONNECTED,
+        STATELESS,
+        UNKNOWN,
+        ERROR
+    }
+
+
+    boolean setConnectionStatus(@NotNull ConnectionStatus connectionStatus);
+
+    @NotNull ConnectionStatus getConnectionStatus();
 
     void setErrorConnectionStatus(
             @NotNull String adapterId,
@@ -22,7 +36,7 @@ public interface ProtocolAdapterState {
             @Nullable String errorMessage,
             boolean sendEvent);
 
-    void setRuntimeStatus(@NotNull ProtocolAdapter.RuntimeStatus runtimeStatus);
+    void setRuntimeStatus(@NotNull RuntimeStatus runtimeStatus);
 
-    @NotNull ProtocolAdapter.RuntimeStatus getRuntimeStatus();
+    @NotNull RuntimeStatus getRuntimeStatus();
 }
