@@ -21,7 +21,6 @@ import com.hivemq.edge.modules.adapters.model.ProtocolAdapterDiscoveryOutput;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterStartInput;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterStartOutput;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -75,8 +74,6 @@ public interface ProtocolAdapter {
     }
 
     @NotNull ProtocolAdapterInformation getProtocolAdapterInformation();
-
-    @Nullable String getErrorMessage();
 
     /**
      * Called by the framework when the instance will be discarded

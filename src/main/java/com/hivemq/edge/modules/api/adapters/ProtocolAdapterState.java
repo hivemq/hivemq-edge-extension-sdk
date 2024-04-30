@@ -5,6 +5,8 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 public interface ProtocolAdapterState {
 
+    @Nullable String getLastErrorMessage();
+
     enum RuntimeStatus {
         STARTED,
         STOPPED
