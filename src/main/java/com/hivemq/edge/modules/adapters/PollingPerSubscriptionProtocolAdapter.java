@@ -13,4 +13,9 @@ public interface PollingPerSubscriptionProtocolAdapter extends ProtocolAdapter {
     @NotNull CompletableFuture<? extends ProtocolAdapterDataSample> poll(@NotNull AdapterSubscription adapterSubscription);
 
     @NotNull List<? extends AdapterSubscription> getSubscriptions();
+
+    default void onSamplerClosed(){
+
+    }
+
 }

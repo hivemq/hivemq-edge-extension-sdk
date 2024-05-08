@@ -26,8 +26,6 @@ public interface ModuleServices {
 
     @NotNull ScheduledExecutorService scheduledExecutorService();
 
-    @NotNull ProtocolAdapterPollingService protocolAdapterPollingService();
-
     @NotNull EventService eventService();
 
 
