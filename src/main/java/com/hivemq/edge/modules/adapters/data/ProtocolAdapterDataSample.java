@@ -7,6 +7,10 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.List;
 
+/**
+ * Interface for data collected by a protocol adapter. The actual data points can be added via the addDataPoint method.
+ *
+ */
 public interface ProtocolAdapterDataSample {
     @JsonIgnore
     @NotNull AdapterSubscription getSubscription();

@@ -19,10 +19,10 @@ import com.hivemq.edge.modules.adapters.factories.AdapterFactories;
 import com.hivemq.edge.modules.adapters.metrics.ProtocolAdapterMetricsHelper;
 import com.hivemq.edge.modules.api.adapters.ModuleServices;
 import com.hivemq.edge.modules.api.adapters.ProtocolAdapterState;
-import com.hivemq.edge.modules.config.CustomConfig;
+import com.hivemq.edge.modules.config.ProtocolAdapterConfig;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
-public interface ProtocolAdapterInput<E extends CustomConfig> {
+public interface ProtocolAdapterInput<E extends ProtocolAdapterConfig> {
     @NotNull E getConfig();
 
     @NotNull String getVersion();

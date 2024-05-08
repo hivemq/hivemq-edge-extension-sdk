@@ -5,6 +5,7 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 import java.util.List;
 
+// TODO the name is still bad
 public interface AdapterSubscription {
     @Nullable String getDestination();
 

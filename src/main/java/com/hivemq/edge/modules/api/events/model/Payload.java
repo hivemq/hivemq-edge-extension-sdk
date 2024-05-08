@@ -1,9 +1,14 @@
-package com.hivemq.api.model.core;
+package com.hivemq.edge.modules.api.events.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/**
+ * Payload of an {@link Event} representing information on the event
+ *
+ *
+ */
 public interface Payload {
 
      enum ContentType {

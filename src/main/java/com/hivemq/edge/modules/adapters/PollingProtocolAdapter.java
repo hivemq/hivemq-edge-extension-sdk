@@ -11,7 +11,6 @@ public interface PollingProtocolAdapter extends ProtocolAdapter {
     @NotNull CompletableFuture<? extends ProtocolAdapterDataSample> poll();
 
     default void onSamplerClosed(){
-
     }
 
 }

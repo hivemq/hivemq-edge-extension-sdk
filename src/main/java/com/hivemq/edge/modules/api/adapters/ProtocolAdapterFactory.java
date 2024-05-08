@@ -17,7 +17,7 @@ package com.hivemq.edge.modules.api.adapters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterInput;
-import com.hivemq.edge.modules.config.CustomConfig;
+import com.hivemq.edge.modules.config.ProtocolAdapterConfig;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.Map;
@@ -27,7 +27,7 @@ import java.util.Map;
  * adapter sub-systems. We bind this to the configuration types to we can provide tightly coupled
  * implementation instances responsible for adapter management.
  */
-public interface ProtocolAdapterFactory<E extends CustomConfig> {
+public interface ProtocolAdapterFactory<E extends ProtocolAdapterConfig> {
 
     /**
      * Returns Metadata related to the protocol adapter instance, including descriptions, iconography,
@@ -40,7 +40,7 @@ public interface ProtocolAdapterFactory<E extends CustomConfig> {
 
     @NotNull E convertConfigObject(final @NotNull ObjectMapper objectMapper, final @NotNull Map<String, Object> config);
 
-    @NotNull Map<String, Object> unconvertConfigObject(final @NotNull ObjectMapper objectMapper, final @NotNull CustomConfig config);
+    @NotNull Map<String, Object> unconvertConfigObject(final @NotNull ObjectMapper objectMapper, final @NotNull ProtocolAdapterConfig config);
 
     /**
      * A bean class that will be reflected upon by the framework to determine the structural requirements of the configuration associated with

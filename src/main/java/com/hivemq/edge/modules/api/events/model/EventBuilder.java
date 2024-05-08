@@ -1,20 +1,24 @@
 package com.hivemq.edge.modules.api.events.model;
 
-import com.hivemq.api.model.core.Payload;
 import com.hivemq.edge.model.TypeIdentifier;
+import com.hivemq.extension.sdk.api.annotations.NotNull;
 
+/**
+ * Builder interface to create {@link Event} for the {@link com.hivemq.edge.modules.api.events.EventService} to notify
+ * HiveMQ Edge of any event regarding components such as protocol adapters.
+ */
 public interface EventBuilder {
-    EventBuilder withSeverity(Event.SEVERITY severity);
+    @NotNull EventBuilder withSeverity(Event.@NotNull SEVERITY severity);
 
-    EventBuilder withMessage(String message);
+    @NotNull EventBuilder withMessage(@NotNull String message);
 
-    EventBuilder withPayload(Payload payload);
+    @NotNull EventBuilder withPayload(@NotNull Payload payload);
 
-    EventBuilder withTimestamp(Long timestamp);
+    @NotNull EventBuilder withTimestamp(@NotNull Long timestamp);
 
-    EventBuilder withAssociatedObject(TypeIdentifier associatedObject);
+    @NotNull EventBuilder withAssociatedObject(@NotNull TypeIdentifier associatedObject);
 
-    EventBuilder withSource(TypeIdentifier source);
+    @NotNull EventBuilder withSource(@NotNull TypeIdentifier source);
 
-    Event build();
+    @NotNull Event build();
 }

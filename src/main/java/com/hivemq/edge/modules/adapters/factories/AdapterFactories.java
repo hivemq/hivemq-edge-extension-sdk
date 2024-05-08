@@ -6,11 +6,7 @@ public interface AdapterFactories {
 
     @NotNull AdapterSubscriptionFactory adapterSubscriptionFactory();
 
-    @NotNull ApiExceptionFactory apiExceptionFactory(@NotNull String message);
-
     @NotNull PayloadFactory payloadFactory();
-
-    @NotNull TypeIdentifierFactory TypeIdentifierFactory();
 
     @NotNull UserPropertyFactory userPropertyFactory();
 

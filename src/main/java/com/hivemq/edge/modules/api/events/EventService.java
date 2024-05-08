@@ -28,7 +28,7 @@ public interface EventService {
 
     void fireEvent(final @NotNull Event event);
 
-    List<Event> readEvents(final @Nullable Long sinceTimestamp, final @Nullable Integer limit);
+    @NotNull List<Event> readEvents(final @Nullable Long sinceTimestamp, final @Nullable Integer limit);
 
 
 }
