@@ -15,32 +15,23 @@
  */
 package com.hivemq.edge.modules.api.adapters;
 
-import com.google.common.base.Preconditions;
-import com.hivemq.extension.sdk.api.annotations.NotNull;
-
 /**
  * @author Simon L Johnson
  */
-public interface ProtocolAdapterCapability {
+public enum ProtocolAdapterCapability {
 
     /**
      * can the adapter-type read values from the external source and publish them into the system
      **/
-    byte READ = 0b00000001;
+     READ,
 
     /**
      * can the adapter-type write values from the local broker publish them into the system
      **/
-    byte WRITE = 0b00000010;
+     WRITE,
 
     /**
      * can the adapter-type discover tags/names from the external source
      **/
-    byte DISCOVER = 0b00000100;
-
-    static boolean supportsCapability(final @NotNull ProtocolAdapterInformation adapterInformation, byte capability) {
-        Preconditions.checkNotNull(adapterInformation);
-        return (adapterInformation.getCapabilities() & capability) == capability;
-    }
-
+     DISCOVER;
 }

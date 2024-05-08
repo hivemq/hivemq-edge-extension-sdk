@@ -19,6 +19,7 @@ import com.hivemq.edge.modules.adapters.ProtocolAdapterConstants;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.annotations.Nullable;
 
+import java.util.EnumSet;
 import java.util.List;
 
 /**
@@ -71,11 +72,12 @@ public interface ProtocolAdapterInformation {
     @Nullable List<ProtocolAdapterConstants.TAG> getTags();
 
     /**
-     * Get the capabilities associated with the adapter. For more information on capabilities, please
-     * refer to the {@link ProtocolAdapterCapability} descriptions.
+     * Get the capabilities associated with the adapter. For more information on capabilities, please refer to the
+     * {@link ProtocolAdapterCapability} descriptions.
+     *
      * @return
      */
-    default byte getCapabilities(){
-        return ProtocolAdapterCapability.READ | ProtocolAdapterCapability.DISCOVER;
+    default @NotNull EnumSet<ProtocolAdapterCapability> getCapabilities(){
+        return EnumSet.of(ProtocolAdapterCapability.READ, ProtocolAdapterCapability.DISCOVER);
     }
 }
