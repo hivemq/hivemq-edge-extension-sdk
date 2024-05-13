@@ -28,7 +28,6 @@ public interface Payload {
             return contentType;
         }
     }
-    #
 
     /**
      * @return the content type of the payload
