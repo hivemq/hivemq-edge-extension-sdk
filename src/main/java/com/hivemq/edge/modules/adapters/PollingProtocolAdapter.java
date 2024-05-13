@@ -12,4 +12,8 @@ public interface PollingProtocolAdapter extends ProtocolAdapter {
     default void onSamplerClosed(){
     }
 
+     int getPollingIntervalMillis();
+
+     int getMaxPollingErrorsBeforeRemoval();
+
 }

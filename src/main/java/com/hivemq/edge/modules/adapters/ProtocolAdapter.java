@@ -44,6 +44,7 @@ public interface ProtocolAdapter {
     @NotNull String getId();
 
 
+    // TODO why return the output. Just set the status like we always
     /**
      * Start the adapter, establishing a connection to any internal or external device using the configuration supplied
      * during instantiation.

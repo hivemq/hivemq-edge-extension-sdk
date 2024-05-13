@@ -22,7 +22,13 @@ import com.hivemq.extension.sdk.api.annotations.Nullable;
  */
 public interface ProtocolAdapterDiscoveryInput {
 
+    /**
+     * @return the root node that should be discovered.
+     */
     @Nullable String getRootNode();
 
+    /**
+     * @return how deep the tree should be discovered.
+     */
     int getDepth();
 }

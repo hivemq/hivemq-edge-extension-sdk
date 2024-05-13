@@ -4,11 +4,11 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface TypeIdentifier {
 
-    enum TYPE {
+    enum Type {
         BRIDGE, ADAPTER, ADAPTER_TYPE, EVENT, USER
     }
 
-    TypeIdentifier.@NotNull TYPE getType();
+    @NotNull Type getType();
 
     @NotNull String getIdentifier();
 

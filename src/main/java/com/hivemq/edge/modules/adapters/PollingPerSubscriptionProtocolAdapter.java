@@ -13,7 +13,11 @@ public interface PollingPerSubscriptionProtocolAdapter extends ProtocolAdapter {
 
     @NotNull List<? extends AdapterSubscription> getSubscriptions();
 
-    default void onSamplerClosed(){
+    int getPollingIntervalMillis();
+
+    int getMaxPollingErrorsBeforeRemoval();
+
+    default void onSamplerClosed() {
 
     }
 

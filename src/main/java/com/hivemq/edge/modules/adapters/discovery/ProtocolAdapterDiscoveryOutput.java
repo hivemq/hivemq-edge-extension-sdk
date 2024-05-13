@@ -20,6 +20,9 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface ProtocolAdapterDiscoveryOutput {
 
+    /**
+     * @return the tree to which the discovered nodes should be added.
+     */
     @NotNull NodeTree getNodeTree();
 
 }

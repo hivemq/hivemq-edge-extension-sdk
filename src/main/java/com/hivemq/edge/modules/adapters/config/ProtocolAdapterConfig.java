@@ -17,7 +17,10 @@ package com.hivemq.edge.modules.adapters.config;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
-/** Marker interface **/
+/**
+ * Marker Interface for the config of Protocol Adapters.
+ *
+ */
 
 public interface ProtocolAdapterConfig {
 
@@ -25,16 +28,6 @@ public interface ProtocolAdapterConfig {
 
     int PORT_MIN = 1;
     int PORT_MAX = 65535;
-    int DEFAULT_POLLING_INTERVAL = 1000;
-    int DEFAULT_MAX_POLLING_ERROR_BEFORE_REMOVAL = 10;
 
     @NotNull String getId();
-
-     default int getPollingIntervalMillis() {
-       return DEFAULT_POLLING_INTERVAL;
-    }
-
-     default int getMaxPollingErrorsBeforeRemoval() {
-        return DEFAULT_MAX_POLLING_ERROR_BEFORE_REMOVAL;
-    }
 }

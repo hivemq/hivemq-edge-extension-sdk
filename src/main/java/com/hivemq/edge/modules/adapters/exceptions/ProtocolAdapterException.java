@@ -15,6 +15,8 @@
  */
 package com.hivemq.edge.modules.adapters.exceptions;
 
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+
 /**
  * @author Simon L Johnson
  */
@@ -23,15 +25,15 @@ public class ProtocolAdapterException extends Exception {
     public ProtocolAdapterException() {
     }
 
-    public ProtocolAdapterException(final String message) {
+    public ProtocolAdapterException(final @NotNull String message) {
         super(message);
     }
 
-    public ProtocolAdapterException(final String message, final Throwable cause) {
+    public ProtocolAdapterException(final @NotNull String message, final @NotNull Throwable cause) {
         super(message, cause);
     }
 
-    public ProtocolAdapterException(final Throwable cause) {
+    public ProtocolAdapterException(final @NotNull Throwable cause) {
         super(cause);
     }
 }

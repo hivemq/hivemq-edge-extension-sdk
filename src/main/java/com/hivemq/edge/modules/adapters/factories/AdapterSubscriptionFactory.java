@@ -10,6 +10,12 @@ import java.util.List;
 
 public interface AdapterSubscriptionFactory {
 
+    /**
+     * @param destination    the mqtt topic on which the data should be published
+     * @param qos            the mqtt qos for the data
+     * @param userProperties mqtt user properties for the publish that will contain the data
+     * @return an {@link AdapterSubscription} containing information how the data will be published.
+     */
     @NotNull AdapterSubscription create(
             @JsonProperty("destination") @Nullable final String destination,
             @JsonProperty("qos") final int qos,
