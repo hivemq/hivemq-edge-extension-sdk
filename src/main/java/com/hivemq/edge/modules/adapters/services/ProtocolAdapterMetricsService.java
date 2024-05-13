@@ -1,4 +1,4 @@
-package com.hivemq.edge.modules.adapters.metrics;
+package com.hivemq.edge.modules.adapters.services;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 

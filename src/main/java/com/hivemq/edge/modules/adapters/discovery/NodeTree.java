@@ -18,8 +18,20 @@ package com.hivemq.edge.modules.adapters.discovery;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.annotations.Nullable;
 
+/**
+ * This interface is used to create a tree of nodes during discovering of values.
+ */
 public interface NodeTree {
 
+    /**
+     * Add a new node to this tree
+     * @param id the unique id of the new node.
+     * @param name the name of the new node.
+     * @param description a description for this node.
+     * @param parentId the id of the parent node.
+     * @param nodeType the type of the node.
+     * @param selectable
+     */
     void addNode(
             @NotNull String id,
             @NotNull String name,

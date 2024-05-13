@@ -15,11 +15,24 @@ import com.hivemq.extension.sdk.api.annotations.NotNull;
  *     private @Nullable String propertyValue = null;
  */
 public interface UserProperty {
+    /**
+     * @return the name for this user property.
+     */
     @NotNull String getName();
 
+    /**
+     *
+     * @param propertyName the name for this user property. The same name may be used for multiple user properties of a publish.
+     */
     void setName(@NotNull String propertyName);
 
+    /**
+     * @return the value of this user property.
+     */
     @NotNull String getValue();
 
+    /**
+     * @param propertyValue the value of the user property.
+     */
     void setValue(@NotNull String propertyValue);
 }

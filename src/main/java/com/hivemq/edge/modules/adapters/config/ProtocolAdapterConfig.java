@@ -31,10 +31,10 @@ public interface ProtocolAdapterConfig {
     @NotNull String getId();
 
      default int getPollingIntervalMillis() {
-       return 1000;
+       return DEFAULT_POLLING_INTERVAL;
     }
 
      default int getMaxPollingErrorsBeforeRemoval() {
-        return -1;
+        return DEFAULT_MAX_POLLING_ERROR_BEFORE_REMOVAL;
     }
 }

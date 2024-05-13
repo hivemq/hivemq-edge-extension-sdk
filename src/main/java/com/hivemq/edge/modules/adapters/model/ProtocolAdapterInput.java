@@ -17,8 +17,8 @@ package com.hivemq.edge.modules.adapters.model;
 
 import com.hivemq.edge.modules.adapters.config.ProtocolAdapterConfig;
 import com.hivemq.edge.modules.adapters.factories.AdapterFactories;
-import com.hivemq.edge.modules.adapters.metrics.ProtocolAdapterMetricsService;
 import com.hivemq.edge.modules.adapters.services.ModuleServices;
+import com.hivemq.edge.modules.adapters.services.ProtocolAdapterMetricsService;
 import com.hivemq.edge.modules.adapters.state.ProtocolAdapterState;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
