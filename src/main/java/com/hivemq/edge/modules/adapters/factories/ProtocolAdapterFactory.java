@@ -13,11 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.adapters.factories;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hivemq.edge.modules.adapters.ProtocolAdapter;
+import com.hivemq.edge.modules.adapters.ProtocolAdapterInformation;
+import com.hivemq.edge.modules.adapters.config.ProtocolAdapterConfig;
 import com.hivemq.edge.modules.adapters.model.ProtocolAdapterInput;
-import com.hivemq.edge.modules.config.ProtocolAdapterConfig;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.Map;

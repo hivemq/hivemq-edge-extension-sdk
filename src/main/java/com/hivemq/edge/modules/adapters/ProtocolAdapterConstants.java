@@ -15,61 +15,10 @@
  */
 package com.hivemq.edge.modules.adapters;
 
-import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.extension.sdk.api.annotations.Nullable;
-
 /**
  * @author Simon L Johnson
  */
 public interface ProtocolAdapterConstants {
 
-    enum TAG {
-        UDP,
-        TCP,
-        SERIAL,
-        INTERNET,
-        WEB,
-        IOT,
-        IIOT,
-        AUTOMATION,
-        FACTORY
-    }
-
-    enum CATEGORY {
-        CONNECTIVITY("Connectivity","A standard connectivity based protocol, typically web standard.", null),
-        INDUSTRIAL("Industrial","Industrial, typically field bus protocols.", null),
-        BUILDING_AUTOMATION("Building Automation","Protocols related to building automation",  null),
-        SIMULATION("Simulation","Simulation protocols, that emulate real world devices", null);
-
-        CATEGORY(final @NotNull String displayName, final @NotNull String description, final @Nullable String image){
-            this.displayName = displayName;
-            this.image = image;
-            this.description = description;
-        }
-
-        final @NotNull String displayName;
-        final @NotNull String description;
-        final @Nullable String image;
-
-        public @NotNull String getDisplayName() {
-            return displayName;
-        }
-
-        public @NotNull String getDescription() {
-            return description;
-        }
-
-        public @Nullable String getImage() {
-            return image;
-        }
-    }
-
-    String ADAPTER_NAME_TOKEN = "adapter.name";
-    String ADAPTER_VERSION_TOKEN = "adapter.version";
-    String ADAPTER_CLASS_TOKEN = "adapter.class";
-    String ADAPTER_PROTOCOL_ID_TOKEN = "adapter.id";
-    String ADAPTER_INSTANCE_ID_TOKEN = "adapter.instance.id";
-
-    public static final String PROTOCOL_ADAPTER_PREFIX = "com.hivemq.edge.protocol-adapters.";
 
 }

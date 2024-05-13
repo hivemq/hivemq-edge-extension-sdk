@@ -1,6 +1,6 @@
 package com.hivemq.edge.modules.adapters.factories;
 
-import com.hivemq.edge.modules.config.UserProperty;
+import com.hivemq.edge.modules.adapters.config.UserProperty;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface UserPropertyFactory {

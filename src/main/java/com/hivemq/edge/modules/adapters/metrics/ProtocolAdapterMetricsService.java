@@ -2,7 +2,10 @@ package com.hivemq.edge.modules.adapters.metrics;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
-public interface ProtocolAdapterMetricsHelper {
+public interface ProtocolAdapterMetricsService {
+
+    String PROTOCOL_ADAPTER_PREFIX = "com.hivemq.edge.protocol-adapters.";
+
     void incrementReadPublishSuccess();
 
     void incrementReadPublishFailure();

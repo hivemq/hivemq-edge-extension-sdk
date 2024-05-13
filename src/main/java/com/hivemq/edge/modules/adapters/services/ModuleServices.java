@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.adapters.services;
 
-import com.hivemq.edge.modules.api.events.EventService;
+import com.hivemq.edge.modules.events.EventService;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.concurrent.ScheduledExecutorService;

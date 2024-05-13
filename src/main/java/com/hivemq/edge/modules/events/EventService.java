@@ -13,11 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.events;
 
+import com.hivemq.edge.modules.events.model.Event;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
-public interface ProtocolAdapterPublishService {
+import java.util.List;
 
-    @NotNull ProtocolAdapterPublishBuilder publish();
+/**
+ * @author Simon L Johnson
+ */
+public interface EventService {
+
+    void fireEvent(final @NotNull Event event);
+
+    @NotNull List<Event> readEvents(final @Nullable Long sinceTimestamp, final @Nullable Integer limit);
+
+
 }

@@ -1,7 +1,7 @@
 package com.hivemq.edge.modules.adapters.factories;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hivemq.edge.modules.api.events.model.Payload;
+import com.hivemq.edge.modules.events.model.Payload;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface PayloadFactory {

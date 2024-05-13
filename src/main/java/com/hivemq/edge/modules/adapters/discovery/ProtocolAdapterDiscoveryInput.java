@@ -13,18 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.model;
+package com.hivemq.edge.modules.adapters.discovery;
 
-import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 /**
  * @author Simon L Johnson
  */
-public interface Identifiable {
+public interface ProtocolAdapterDiscoveryInput {
 
-    /**
-     * Represents a uniquely identifiable object in the system.
-     * @return The system-wide identifier of the object
-     */
-    @NotNull TypeIdentifier getIdentifier();
+    @Nullable String getRootNode();
+
+    int getDepth();
 }

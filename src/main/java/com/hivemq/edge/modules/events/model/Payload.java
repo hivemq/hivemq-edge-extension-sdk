@@ -1,4 +1,4 @@
-package com.hivemq.edge.modules.api.events.model;
+package com.hivemq.edge.modules.events.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.hivemq.extension.sdk.api.annotations.NotNull;

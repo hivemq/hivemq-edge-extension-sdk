@@ -13,25 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.adapters;
+package com.hivemq.edge.modules.adapters.discovery;
 
-/**
- * @author Simon L Johnson
- */
-public class ProtocolAdapterException extends Exception {
+import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
-    public ProtocolAdapterException() {
-    }
+public interface NodeTree {
 
-    public ProtocolAdapterException(final String message) {
-        super(message);
-    }
+    void addNode(
+            @NotNull String id,
+            @NotNull String name,
+            @NotNull String description,
+            @Nullable String parentId,
+            @NotNull NodeType nodeType,
+            boolean selectable);
 
-    public ProtocolAdapterException(final String message, final Throwable cause) {
-        super(message, cause);
-    }
-
-    public ProtocolAdapterException(final Throwable cause) {
-        super(cause);
-    }
 }
+
+

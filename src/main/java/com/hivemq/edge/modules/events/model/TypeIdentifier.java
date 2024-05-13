@@ -1,10 +1,10 @@
-package com.hivemq.edge.model;
+package com.hivemq.edge.modules.events.model;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface TypeIdentifier {
 
-    public enum TYPE {
+    enum TYPE {
         BRIDGE, ADAPTER, ADAPTER_TYPE, EVENT, USER
     }
 

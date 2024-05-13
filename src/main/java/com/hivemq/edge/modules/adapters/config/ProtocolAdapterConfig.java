@@ -13,13 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.adapters.model;
+package com.hivemq.edge.modules.adapters.config;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
+/** Marker interface **/
 
-public interface ProtocolAdapterDiscoveryOutput {
+public interface ProtocolAdapterConfig {
 
-    @NotNull NodeTree getNodeTree();
+    String ID_REGEX = "^([a-zA-Z_0-9-_])*$";
 
+    int PORT_MIN = 1;
+    int PORT_MAX = 65535;
+    int DEFAULT_POLLING_INTERVAL = 1000;
+    int DEFAULT_MAX_POLLING_ERROR_BEFORE_REMOVAL = 10;
+
+    @NotNull String getId();
+
+     default int getPollingIntervalMillis() {
+       return 1000;
+    }
+
+     default int getMaxPollingErrorsBeforeRemoval() {
+        return -1;
+    }
 }

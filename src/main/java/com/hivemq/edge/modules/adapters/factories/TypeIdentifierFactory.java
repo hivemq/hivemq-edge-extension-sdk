@@ -1,6 +1,6 @@
 package com.hivemq.edge.modules.adapters.factories;
 
-import com.hivemq.edge.model.TypeIdentifier;
+import com.hivemq.edge.modules.events.model.TypeIdentifier;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 public interface TypeIdentifierFactory {

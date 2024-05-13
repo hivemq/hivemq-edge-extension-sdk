@@ -13,25 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.adapters.discovery;
 
-/**
- * @author Simon L Johnson
- */
-public enum ProtocolAdapterCapability {
-
-    /**
-     * can the adapter-type read values from the external source and publish them into the system
-     **/
-     READ,
-
-    /**
-     * can the adapter-type write values from the local broker publish them into the system
-     **/
-     WRITE,
-
-    /**
-     * can the adapter-type discover tags/names from the external source
-     **/
-     DISCOVER;
+public enum NodeType {
+    FOLDER,
+    OBJECT,
+    VALUE
 }

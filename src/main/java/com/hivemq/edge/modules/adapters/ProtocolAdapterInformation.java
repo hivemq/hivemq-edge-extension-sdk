@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.adapters;
 
-import com.hivemq.edge.modules.adapters.ProtocolAdapterConstants;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.extension.sdk.api.annotations.Nullable;
 
@@ -63,13 +62,13 @@ public interface ProtocolAdapterInformation {
      * An adapter can be in a single category. This helps discovery purposes
      * @return the category in which the adapter resides
      */
-    @Nullable ProtocolAdapterConstants.CATEGORY getCategory();
+    @Nullable ProtocolAdapterCategory getCategory();
 
     /**
      * Tag represents the keywords that can be associated with this type of adapter
      * @return a list of associated tags that can be used for search purposes
      */
-    @Nullable List<ProtocolAdapterConstants.TAG> getTags();
+    @Nullable List<ProtocolAdapterTag> getTags();
 
     /**
      * Get the capabilities associated with the adapter. For more information on capabilities, please refer to the

@@ -1,10 +1,10 @@
-package com.hivemq.edge.modules.api.events.model;
+package com.hivemq.edge.modules.events.model;
 
-import com.hivemq.edge.model.TypeIdentifier;
+import com.hivemq.edge.modules.events.EventService;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 /**
- * Builder interface to create {@link Event} for the {@link com.hivemq.edge.modules.api.events.EventService} to notify
+ * Builder interface to create {@link Event} for the {@link EventService} to notify
  * HiveMQ Edge of any event regarding components such as protocol adapters.
  */
 public interface EventBuilder {

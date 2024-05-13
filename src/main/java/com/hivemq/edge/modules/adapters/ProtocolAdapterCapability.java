@@ -13,22 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.events;
-
-import com.hivemq.edge.modules.api.events.model.Event;
-import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.extension.sdk.api.annotations.Nullable;
-
-import java.util.List;
+package com.hivemq.edge.modules.adapters;
 
 /**
  * @author Simon L Johnson
  */
-public interface EventService {
+public enum ProtocolAdapterCapability {
 
-    void fireEvent(final @NotNull Event event);
+    /**
+     * can the adapter-type read values from the external source and publish them into the system
+     **/
+     READ,
 
-    @NotNull List<Event> readEvents(final @Nullable Long sinceTimestamp, final @Nullable Integer limit);
+    /**
+     * can the adapter-type write values from the local broker publish them into the system
+     **/
+     WRITE,
 
-
+    /**
+     * can the adapter-type discover tags/names from the external source
+     **/
+     DISCOVER;
 }

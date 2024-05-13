@@ -13,16 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.adapters.model;
-
-import com.hivemq.extension.sdk.api.annotations.Nullable;
+package com.hivemq.edge.modules.adapters.exceptions;
 
 /**
  * @author Simon L Johnson
  */
-public interface ProtocolAdapterDiscoveryInput {
+public class ProtocolAdapterException extends Exception {
 
-    @Nullable String getRootNode();
+    public ProtocolAdapterException() {
+    }
 
-    int getDepth();
+    public ProtocolAdapterException(final String message) {
+        super(message);
+    }
+
+    public ProtocolAdapterException(final String message, final Throwable cause) {
+        super(message, cause);
+    }
+
+    public ProtocolAdapterException(final Throwable cause) {
+        super(cause);
+    }
 }

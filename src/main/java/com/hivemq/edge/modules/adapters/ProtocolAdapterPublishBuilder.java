@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hivemq.edge.modules.api.adapters;
+package com.hivemq.edge.modules.adapters;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 import com.hivemq.mqtt.PublishReturnCode;

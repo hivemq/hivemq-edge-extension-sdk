@@ -1,8 +1,7 @@
 package com.hivemq.edge.modules.adapters;
 
+import com.hivemq.edge.modules.adapters.config.AdapterSubscription;
 import com.hivemq.edge.modules.adapters.data.ProtocolAdapterDataSample;
-import com.hivemq.edge.modules.api.adapters.ProtocolAdapter;
-import com.hivemq.edge.modules.config.AdapterSubscription;
 import com.hivemq.extension.sdk.api.annotations.NotNull;
 
 import java.util.List;
