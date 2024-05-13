@@ -16,10 +16,11 @@
 package com.hivemq.edge.modules.adapters.model;
 
 import com.hivemq.extension.sdk.api.annotations.NotNull;
+import com.hivemq.extension.sdk.api.annotations.Nullable;
 
 public interface ProtocolAdapterStartOutput {
-    void startedSuccessfully(@NotNull String message);
+    void startedSuccessfully();
 
-    void failStart(@NotNull Throwable t, @NotNull String errorMessage);
+    void failStart(@NotNull Throwable t, @Nullable String errorMessage);
 
 }

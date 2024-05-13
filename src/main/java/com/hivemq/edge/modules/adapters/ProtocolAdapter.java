@@ -52,9 +52,8 @@ public interface ProtocolAdapter {
      * @param input  - the state associated with runtime. Allows the adapter to bind to required services in a decoupled
      *               manner
      * @param output - the output resulting from the start operation. The adapter will
-     * @return a completable future which can be used to check on the status of the start operation.
      */
-    @NotNull CompletableFuture<ProtocolAdapterStartOutput> start(
+     void start(
             @NotNull ProtocolAdapterStartInput input, @NotNull ProtocolAdapterStartOutput output);
 
     /**
