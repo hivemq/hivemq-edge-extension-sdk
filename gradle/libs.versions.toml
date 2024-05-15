@@ -1,16 +1,6 @@
 [versions]
-jackson = "2.17.0"
-networkNT = "1.0.84"
-swagger = "2.2.21"
-apache-commonsLang = "3.12.0"
-guava = "32.1.3-jre"
 
 [libraries]
-jackson-jaxrs-jsonProvider = { module = "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider", version.ref = "jackson" }
-networkNT = { module = "com.networknt:json-schema-validator", version.ref = "networkNT" }
-swagger-annotations = { module = "io.swagger.core.v3:swagger-annotations", version.ref = "swagger" }
-apache-commonsLang = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commonsLang" }
-guava = { module = "com.google.guava:guava", version.ref = "guava" }
 
 [plugins]
 defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
