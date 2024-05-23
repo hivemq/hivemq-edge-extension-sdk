@@ -1,0 +1,10 @@
+[versions]
+
+[libraries]
+
+[plugins]
+defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
+license = { id = "com.github.hierynomus.license", version = "0.16.1" }
+proguard = { id = "io.github.sgtsilvio.gradle.proguard", version = "0.7.0" }
+shadow = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+
