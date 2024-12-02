@@ -1,6 +1,8 @@
 [versions]
+jetbrains = "24.1.0"
 
 [libraries]
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains" }
 
 [plugins]
 defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
