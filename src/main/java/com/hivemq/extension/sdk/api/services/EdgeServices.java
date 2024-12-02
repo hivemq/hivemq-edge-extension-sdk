@@ -43,7 +43,7 @@ public class EdgeServices {
         return getClassObject(EdgeInterceptorRegistry.class);
     }
 
-    private static <T> @NotNull T getClassObject(@NotNull final Class<T> clazz) {
+    private static <T> @NotNull T getClassObject(final @NotNull Class<T> clazz) {
 
         if (edgeServices == null) {
             throw new RuntimeException(String.format(NO_ACCESS_MESSAGE, Thread.currentThread().getName()));
