@@ -16,7 +16,7 @@
 package com.hivemq.extension.sdk.api.interceptor.bridge.parameter;
 
 import com.hivemq.extension.sdk.api.annotations.DoNotImplement;
-import com.hivemq.extension.sdk.api.annotations.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * The bridge information contains specific data for a MQTT bridge.
