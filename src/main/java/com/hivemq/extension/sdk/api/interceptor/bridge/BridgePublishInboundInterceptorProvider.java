@@ -15,8 +15,8 @@
  */
 package com.hivemq.extension.sdk.api.interceptor.bridge;
 
-import com.hivemq.extension.sdk.api.annotations.NotNull;
-import com.hivemq.extension.sdk.api.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import com.hivemq.extension.sdk.api.client.parameter.ServerInformation;
 import com.hivemq.extension.sdk.api.interceptor.bridge.parameter.BridgeInboundProviderInput;
 import com.hivemq.extension.sdk.api.interceptor.bridge.parameter.BridgeInformation;
