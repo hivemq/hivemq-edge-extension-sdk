@@ -10,11 +10,11 @@ plugins {
     `java-library`
     `maven-publish`
     signing
-    alias(libs.plugins.mavenCentralPublishing)
-    alias(libs.plugins.defaults)
-    alias(libs.plugins.metadata)
-    alias(libs.plugins.javadocLinks)
-    alias(libs.plugins.license)
+    id("io.github.gradle-nexus.publish-plugin")
+    id("io.github.sgtsilvio.gradle.defaults")
+    id("com.github.sgtsilvio.gradle.metadata")
+    id("com.github.sgtsilvio.gradle.javadoc-links")
+    id("com.github.hierynomus.license")
 }
 
 plugins.withId("com.hivemq.version-updater") {
@@ -119,6 +119,12 @@ signing {
     val signingPassword: String? by project
     useInMemoryPgpKeys(signingKey, signingPassword)
     sign(publishing.publications["maven"])
+}
+
+nexusPublishing {
+    repositories {
+        sonatype()
+    }
 }
 
 /* ******************** checks ******************** */
