@@ -10,10 +10,10 @@ plugins {
     `java-library`
     `maven-publish`
     signing
-    alias(libs.plugins.mavenCentralPublishing)
+    alias(libs.plugins.mavencentralpublishing)
     alias(libs.plugins.defaults)
     alias(libs.plugins.metadata)
-    alias(libs.plugins.javadocLinks)
+    alias(libs.plugins.javadoclinks)
     alias(libs.plugins.license)
 }
 

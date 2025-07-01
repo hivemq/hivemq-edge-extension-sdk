@@ -15,7 +15,7 @@ jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "j
 
 [plugins]
 defaults = { id = "io.github.sgtsilvio.gradle.defaults", version.ref = "plugin-defaults" }
-javadocLinks = { id = "io.github.sgtsilvio.gradle.javadoc-links", version.ref = "plugin-javadoc-links" }
+javadoclinks = { id = "io.github.sgtsilvio.gradle.javadoc-links", version.ref = "plugin-javadoc-links" }
 license = { id = "com.github.hierynomus.license", version.ref = "plugin-license" }
-mavenCentralPublishing = { id = "io.github.sgtsilvio.gradle.maven-central-publishing", version.ref = "plugin-maven-central-publishing" }
+mavencentralpublishing = { id = "io.github.sgtsilvio.gradle.maven-central-publishing", version.ref = "plugin-maven-central-publishing" }
 metadata = { id = "io.github.sgtsilvio.gradle.metadata", version.ref = "plugin-metadata" }
