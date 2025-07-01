@@ -1,12 +1,21 @@
 [versions]
-jetbrains = "24.1.0"
+jetbrains-annotations = "24.1.0"
+
+#Plugin Versions
+plugin-defaults = "0.2.0"
+plugin-javadoc-links = "0.8.0"
+plugin-license = "0.16.1"
+plugin-maven-central-publishing = "0.4.1"
+plugin-metadata = "0.5.0"
+
 
 [libraries]
-jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains" }
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
+
 
 [plugins]
-defaults = { id = "io.github.sgtsilvio.gradle.defaults", version = "0.2.0" }
-metadata = { id = "io.github.sgtsilvio.gradle.metadata", version = "0.5.0" }
-javadocLinks = { id = "io.github.sgtsilvio.gradle.javadoc-links", version = "0.8.0" }
-license = { id = "com.github.hierynomus.license", version = "0.16.1" }
-mavenCentralPublishing = { id = "io.github.sgtsilvio.gradle.maven-central-publishing", version = "0.4.1" }
+defaults = { id = "io.github.sgtsilvio.gradle.defaults", version.ref = "plugin-defaults" }
+javadocLinks = { id = "io.github.sgtsilvio.gradle.javadoc-links", version.ref = "plugin-javadoc-links" }
+license = { id = "com.github.hierynomus.license", version.ref = "plugin-license" }
+mavenCentralPublishing = { id = "io.github.sgtsilvio.gradle.maven-central-publishing", version.ref = "plugin-maven-central-publishing" }
+metadata = { id = "io.github.sgtsilvio.gradle.metadata", version.ref = "plugin-metadata" }
