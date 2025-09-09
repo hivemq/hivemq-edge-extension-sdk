@@ -81,13 +81,15 @@ tasks.withType<Jar>().configureEach {
     )
 }
 
+val cleanJavadoc by tasks.registering(JavaExec::class) {
+    classpath("gradle/tools/javadoc-cleaner-1.0.jar")
+}
+
 tasks.javadoc {
     title = "${metadata.readableName.get()} ${project.version} API"
 
     doLast {
-        javaexec {
-            classpath("gradle/tools/javadoc-cleaner-1.0.jar")
-        }
+        cleanJavadoc.get().exec()
     }
 
     doLast { // javadoc search fix for jdk 11 https://bugs.openjdk.java.net/browse/JDK-8215291
