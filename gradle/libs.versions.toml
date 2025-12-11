@@ -3,10 +3,10 @@ jetbrains-annotations = "24.1.0"
 
 #Plugin Versions
 plugin-defaults = "0.2.0"
-plugin-javadoc-links = "0.8.0"
+plugin-javadoc-links = "0.9.0"
 plugin-license = "0.16.1"
 plugin-maven-central-publishing = "0.4.1"
-plugin-metadata = "0.5.0"
+plugin-metadata = "0.6.0"
 
 
 [libraries]
