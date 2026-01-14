@@ -17,7 +17,7 @@ plugins {
     alias(libs.plugins.license)
 }
 
-plugins.withId("com.hivemq.version-updater") {
+plugins.withId("com.hivemq.edge-version-updater") {
     project.ext.set("versionUpdaterFiles", arrayOf("README.adoc"))
 }
 
