@@ -4,7 +4,7 @@ jetbrains-annotations = "24.1.0"
 #Plugin Versions
 plugin-defaults = "0.2.0"
 plugin-javadoc-links = "0.9.0"
-plugin-license = "0.16.1"
+plugin-hivemq-license = "1.0.0"
 plugin-maven-central-publishing = "0.4.1"
 plugin-metadata = "0.6.0"
 plugin-spotless = "7.0.2"
@@ -17,7 +17,7 @@ jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "j
 [plugins]
 defaults = { id = "io.github.sgtsilvio.gradle.defaults", version.ref = "plugin-defaults" }
 javadoclinks = { id = "io.github.sgtsilvio.gradle.javadoc-links", version.ref = "plugin-javadoc-links" }
-license = { id = "com.github.hierynomus.license", version.ref = "plugin-license" }
+hivemq-license = { id = "com.hivemq.tools.license", version.ref = "plugin-hivemq-license" }
 mavencentralpublishing = { id = "io.github.sgtsilvio.gradle.maven-central-publishing", version.ref = "plugin-maven-central-publishing" }
 metadata = { id = "io.github.sgtsilvio.gradle.metadata", version.ref = "plugin-metadata" }
 spotless = { id = "com.diffplug.spotless", version.ref = "plugin-spotless" }
