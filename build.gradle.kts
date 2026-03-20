@@ -14,7 +14,7 @@ plugins {
     alias(libs.plugins.defaults)
     alias(libs.plugins.metadata)
     alias(libs.plugins.javadoclinks)
-    alias(libs.plugins.license)
+    alias(libs.plugins.hivemq.license)
 }
 
 plugins.withId("com.hivemq.edge-version-updater") {
@@ -81,28 +81,14 @@ tasks.withType<Jar>().configureEach {
     )
 }
 
-val cleanJavadoc by tasks.registering(JavaExec::class) {
-    classpath("gradle/tools/javadoc-cleaner-1.0.jar")
-}
-
 tasks.javadoc {
     title = "${metadata.readableName.get()} ${project.version} API"
 
+    val javadocCleanerResult = providers.javaexec {
+        classpath(layout.projectDirectory.file("gradle/tools/javadoc-cleaner-1.0.jar"))
+    }.result
     doLast {
-        cleanJavadoc.get().exec()
-    }
-
-    doLast { // javadoc search fix for jdk 11 https://bugs.openjdk.java.net/browse/JDK-8215291
-        copy {
-            from(destinationDir!!.resolve("search.js"))
-            into(temporaryDir)
-            filter { line -> line.replace("if (ui.item.p == item.l) {", "if (item.m && ui.item.p == item.l) {") }
-        }
-        delete(destinationDir!!.resolve("search.js"))
-        copy {
-            from(temporaryDir.resolve("search.js"))
-            into(destinationDir!!)
-        }
+        javadocCleanerResult.get()
     }
 }
 
@@ -123,9 +109,9 @@ signing {
     sign(publishing.publications["maven"])
 }
 
-/* ******************** checks ******************** */
+/* ******************** compliance ******************** */
 
-license {
-    header = file("HEADER")
-    mapping("java", "SLASHSTAR_STYLE")
+hivemqLicense {
+    projectName.set("HiveMQ Edge Extension SDK")
+    thirdPartyLicenseDirectory.set(layout.projectDirectory.dir("src/distribution/third-party-licenses"))
 }
