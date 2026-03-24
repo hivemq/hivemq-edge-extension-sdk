@@ -4,7 +4,7 @@ jetbrains-annotations = "24.1.0"
 #Plugin Versions
 plugin-defaults = "0.2.0"
 plugin-javadoc-links = "0.9.0"
-plugin-hivemq-license = "1.0.0"
+plugin-hivemq-license = "1.3.2"
 plugin-maven-central-publishing = "0.4.1"
 plugin-metadata = "0.6.0"
 plugin-spotless = "7.0.2"
