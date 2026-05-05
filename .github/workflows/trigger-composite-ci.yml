@@ -1,0 +1,42 @@
+name: Trigger composite CI
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+concurrency:
+  group: trigger-composite-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  mirror-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout composite
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        with:
+          repository: hivemq/hivemq-edge-composite
+          token: ${{ secrets.HIVEMQ_COMPOSITE_TOKEN }}
+          fetch-depth: 0
+
+      - name: Mirror or delete branch
+        env:
+          BRANCH: ${{ github.head_ref }}
+          ACTION: ${{ github.event.action }}
+          SOURCE_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git config user.email "ci@hivemq.com"
+          git config user.name  "hivemq-ci"
+
+          if [ "$ACTION" = "closed" ]; then
+            git push origin --delete "$BRANCH" || true
+            exit 0
+          fi
+
+          git fetch origin master
+          git checkout -B "$BRANCH" origin/master
+          git commit --allow-empty -m "Trigger composite CI for ${SOURCE_REPO}#${PR_NUMBER} @ ${PR_SHA}"
+          git push -f origin "$BRANCH"
