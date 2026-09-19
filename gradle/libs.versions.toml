@@ -1,5 +1,5 @@
 [versions]
-jetbrains-annotations = "24.1.0"
+jetbrains-annotations = "26.1.0"
 
 #Plugin Versions
 plugin-defaults = "0.3.0"
