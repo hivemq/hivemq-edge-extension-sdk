@@ -39,7 +39,7 @@ To use the SDK, add the following dependency to your Maven project:
 <dependency>
     <groupId>com.hivemq</groupId>
     <artifactId>hivemq-edge-extension-sdk</artifactId>
-    <version>2026.14</version>
+    <version>2026.15</version>
 </dependency>
 ----
 
