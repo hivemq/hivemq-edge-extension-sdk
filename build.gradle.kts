@@ -113,6 +113,10 @@ signing {
     sign(publishing.publications["maven"])
 }
 
+tasks.mavenCentralBundle {
+    exclude("**/*.asc.*", "**/*.sha256", "**/*.sha512")
+}
+
 /* ******************** compliance ******************** */
 
 hivemqLicense {
